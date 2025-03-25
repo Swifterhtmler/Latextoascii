@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaTeX to ASCII Converter | Chrome Extension</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="logo.png" width="50px" height="50px" alt="Logo">
+                <span>Lat2Cii</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Ominaisuudet</a>
+                <a href="#how-it-works">Kuinka se toimii</a>
+                <a href="#installation">Lataus</a>
+                <a href="#demo">Demo</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <button class="mobile-menu-btn" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#installation">Installation</a>
+            <a href="#demo">Demo</a>
+            <a href="#faq">FAQ</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Muunna Latex Ascii muotoon</h1>
+                <p>Muunna Latex kaavoja AMS-Math muodosta laskin ystävällisempään Ascii muotoon.</p>
+                <div class="cta-buttons">
+                    <a href="#download" class="btn btn-primary">Lataa laajennus</a>
+                    <a href="#demo" class="btn btn-secondary">Kokeile demoa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>ominaisuudet</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <!--Icon by freepik from flaticons-->
+                        <img src="image copy.png" height="50px" width="auto" alt="Speed icon">
+                    </div>
+                    <h3>Nopea muunto</h3>
+                    <p>Muunna Latex kaavoja millisekunneissa optimidun algoritmin ansiosta.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <!--Icon by freepik from flaticons-->
+                        <img src="image copy 2.png" height="50px" width="auto" alt="Accuracy icon">
+                    </div>
+                    <h3>Tarkkuus</h3>
+                    <p>Tarkka muunto prosessi estäen yleisiä ongelmia Latexin muuntovaiheessa.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="image copy 3.png" height="50px" width="auto" alt="Context menu icon">
+                    </div>
+                    <h3>Context Menu integraatio</h3>
+                    <p>Lisää laajennus Chromeen ja kiinnitä se ja se toimii millä tahansa sivulla.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="image copy 4.png" width="50px" height="auto" alt="Clipboard icon">
+                    </div>
+                    <h3>Kopio leikepöydälle</h3>
+                    <p>Laajennus lisää valmiit muunnokset suoraan leikepöydälle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>Miten laajennnus toimii</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Lataa laajennus</h3>
+                        <p>Lataa laajennus joko tältä nettisivulta tai Githubista</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Valitse LaTeX kaava</h3>
+                        <p>Valitse kaava editorista ja tuo se laajennuksen ponnahdus popup ikkunaan</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Muunna kaava painamalla enter</h3>
+                        <p>Ei ylimääräisiä napinpainalluksia vain näppäin painalluksia</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Käytä missä vain</h3>
+                        <p>Käytä muunnettua Ascii muotoa esimerkiksi speedcrunch tai TI-nspire laskimissa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="installation" class="installation">
+        <div class="container">
+            <h2>Asennus ohje</h2>
+            <div class="installation-container">
+                <div class="installation-steps">
+                    <div class="installation-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Lataa laajennus</h3>
+                            <p>Klikkaa alla olevaa nappia ladataksesi uusin Latex2Ascii versio</p>
+                            <a href="latextoAScii 2.zip" class="btn btn-primary download-btn" id="downloadBtn">Lataa Latex2Ascii V:1.1.0</a>
+                        </div>
+                    </div>
+                    <div class="installation-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Avaa Chrome laajennus sivu</h3>
+                            <p>Kirjoita <code>chrome://extensions</code> chromen hakupalkkiin.</p>
+                        </div>
+                    </div>
+                    <div class="installation-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Ota kehittäjätila käyttöön</h3>
+                            <p>Vaihda "kehittäjä tila" kytkin päälle oikeasta yläkulmasta.</p>
+                        </div>
+                    </div>
+                    <div class="installation-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Lataa pakkaamaton</h3>
+                            <p>Valitse lataa pakkaamaton ja valitse purettu ZIP tiedosto mikä sisältää laajennuksen.</p>
+                        </div>
+                    </div>
+                    <div class="installation-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Lisää laajennus suosikkeihin</h3>
+                            <p>Klikkaa 📍 laajennuksen vieressä lisätäksesi sen yläriville suosikkien joukkoon, jotta sen käyttö on nopeampaa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2>Kokeile sitä</h2>
+            <p class="demo-description">Anna LaTeX kaava testataksesi laajennuksen toimintoja.</p>
+            <div class="converter">
+                <div class="input-area">
+                    <h3>LaTeX Input</h3>
+                    <textarea id="latexInput" placeholder="Anna LaTeX kaava tähän, kuten.. \frac{-b \pm \sqrt{b^2-4ac}}{2a}"></textarea>
+                </div>
+                <button id="convertBtn" class="btn btn-primary">Muunna →</button>
+                <div class="output-area">
+                    <h3>ASCII Output</h3>
+                    <div id="asciiOutput" class="ascii-result">
+                        <pre>Tulokset näkyvät täällä</pre>
+                    </div>
+                    <button id="copyBtn" class="btn btn-secondary">Lataa leikepöydälle</button>
+                </div>
+            </div>
+            <div class="examples">
+                <h3>Esimerkki yhtälöitä</h3>
+                <div class="example-buttons">
+                    <button class="example-btn" data-latex="E = mc^2">Suhteellisuusteoria</button>
+                    <button class="example-btn" data-latex="\sum_{i=1}^{n} i = \frac{n(n+1)}{2}">Summa kaava </button>
+                    <button class="example-btn" data-latex="\int_{a}^{b} f(x) dx = F(b) - F(a)">Integraali</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Usein kysyttyjä kysymyksiä</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">Onko laajennus ilmainen?</div>
+                    <div class="accordion-content">
+                        <p>Kyllä, laajennus on täysin ilmainen.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Miksei laajennus ole Chrome Webstoressa?</div>
+                    <div class="accordion-content">
+                        <p>Olemme tällä hetkellä laittamassa sitä Chrome Webstoreen, mutta tällä hetkellä sen voi ladata vain manuaalisesti.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Toimiiko se ilman nettiyhteyttä?</div>
+                    <div class="accordion-content">
+                        <p>Kyllä laajennus ei tarvitse nettiyhteyttä toimiakseen.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Mitä LaTeX komentoja tueteen?</div>
+                    <div class="accordion-content">
+                        <p>Suurinta osaa AMS-Math komennoista tuetaan.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Onko laajennus turvallinen käyttää?</div>
+                    <div class="accordion-content">
+                        <p>Kyllä laajennus perustuu avoimeen lähdekoodiin ja ei jaa laskujasi kenellekkään.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Kuinka voin ilmoittaa vian tai pyytää lisäominaisuuksia</div>
+                    <div class="accordion-content">
+                        <p>voit ilmoittaa viasta ottamalla yhteyttä Githubin kautta tai luomalla issue:n Githubussa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download-section">
+        <div class="container">
+            <h2>Lataa LaTeX2Ascii</h2>
+            <p>Lataa viimeisen vakaa versio ja aloita käyttö tänään.</p>
+            <div class="download-options">
+                <div class="download-option">
+                    <h3>LateX2Ascii V1.1.0</h3>
+                    <p>viimeisin vakaa julkaisu</p>
+                    <a href="LatextoAScii 2.zip" class="btn btn-primary download-btn">Lataa ZIP</a>
+                    <p class="download-meta">koko: 200 KB • julkaistu: March 24, 2025</p>
+                </div>
+                <div class="download-option">
+                    <h3>lähdekoodi</h3>
+                    <p>Katso koko Lähdekoodi</p>
+                    <a href="https://github.com/Swifterhtmler/Latex-to-Ascii-converter-extension" class="btn btn-secondary">Lähdekoodi GitHubissa</a>
+                    <p class="download-meta">MIT lisenssi • Osallistuminen toivottua</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Valmis aloittamaan käyttö</h2>
+            <p>Aloita laajennuksen käyttö jo tänään ilmaiseksi.</p>
+            <a href="#download" class="btn btn-primary">Lataa nyt</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.png" height="50px" width="auto" alt="Logo">
+                    <span>LaTeX2ASCII</span>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Tuote</h4>
+                        <a href="#features">Features</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#installation">Installation</a>
+                        <a href="#demo">Demo</a>
+                        <a href="#download">Download</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Linkit</h4>
+                        <a href="https://github.com/Swifterhtmler/Latex-to-Ascii-converter-extension">GitHub</a>
+                        <a href="https://www.flaticon.com/free-icons/accuracy" title="accuracy icons">Accuracy icons created by Assia Benkerroum  - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/speed" title="speed icons">Speed icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/application" title="application icons">Application icons created by Yudhi Restu - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/clipboard" title="clipboard icons">Clipboard icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/menu-bar" title="menu bar icons">Menu bar icons created by BomSymbols - Flaticon</a>
+                    </div>
+                 
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LaTeX2ASCII. kaikki oikeudet pidätetään</p>
+                <div class="social-links">
+                    <p><a href="https://www.github.com/swifterhtmler" aria-label="GitHub">Github</a></p>
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
